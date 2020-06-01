@@ -12,7 +12,7 @@ if mods["omnimatter"] then
 					if string.find(icon, "num_6.png") then
 
 						--log(serpent.block(rec))
-						icon = "__PyCoalTBaA__/graphics/icons/num_6.png"
+						icon = "__PyCoalTBaA-Temp-Dark__/graphics/icons/num_6.png"
 
 					end
 					--log(serpent.block(rec))
@@ -28,7 +28,7 @@ if mods["omnimatter"] then
 
 	if data.raw.recipe["omnirec-base-6-extraction-2"] ~= nil then
 
-		data.raw.recipe["omnirec-base-6-extraction-2"].icons[2].icon = "__PyCoalTBaA__/graphics/icons/num_6.png"
+		data.raw.recipe["omnirec-base-6-extraction-2"].icons[2].icon = "__PyCoalTBaA-Temp-Dark__/graphics/icons/num_6.png"
 
 	end
 

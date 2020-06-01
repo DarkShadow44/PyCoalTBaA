@@ -154,7 +154,7 @@ data:extend(
     {
       {type="item", name="sand", amount=2}
     },
-	icon = "__PyCoalTBaA__/graphics/icons/sand.png",
+	icon = "__PyCoalTBaA-Temp-Dark__/graphics/icons/sand.png",
 	icon_size = 32,
 	order = "a[angelsore1-crushed-hand]",
     },

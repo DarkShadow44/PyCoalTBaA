@@ -7,7 +7,7 @@ data:extend(
 	type = "technology",
 	name = "exobiology",
 	icon_size = 128,
-	icon = "__PyCoalTBaA__/graphics/icons/untextured128.png",
+	icon = "__PyCoalTBaA-Temp-Dark__/graphics/icons/untextured128.png",
 	effects =
 		{
 			{

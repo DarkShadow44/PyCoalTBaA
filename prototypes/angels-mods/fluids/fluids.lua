@@ -3,7 +3,7 @@ data:extend(
 	{
 	type = "fluid",
 	name = "molten-glass",
-	icon = "__PyCoalTBaA__/graphics/icons/moltenglass.png",
+	icon = "__PyCoalTBaA-Temp-Dark__/graphics/icons/moltenglass.png",
 	icon_size = 32,
 	default_temperature = 750,
     heat_capacity = "0KJ",

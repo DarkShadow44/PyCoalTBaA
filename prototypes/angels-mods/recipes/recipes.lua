@@ -69,7 +69,7 @@ for _,g in pairs(glassrecipes) do
 
 		--replace type, name, amount
 		data.raw.recipe[g].results = {{type = "fluid", name = "molten-glass", amount = amount}}
-		data.raw.recipe[g].icon = "__PyCoalTBaA__/graphics/icons/moltenglass.png"
+		data.raw.recipe[g].icon = "__PyCoalTBaA-Temp-Dark__/graphics/icons/moltenglass.png"
 	end
 end
 --replace angels molten glass with my own
@@ -279,7 +279,7 @@ fun.Recipe
 				{type = "item", name = "niobium-ore", amount_min = 1, amount_max = 2, probability = 0.36}
 			}
 		},
-		icon = "__PyCoalTBaA__/graphics/icons/slag-processing-mol.png",
+		icon = "__PyCoalTBaA-Temp-Dark__/graphics/icons/slag-processing-mol.png",
 		order = "a-a [slag-processing-up]",
 }
 
@@ -310,7 +310,7 @@ fun.Recipe
 					{type = "item", name = "niobium-ore", amount = 4}
 				}
 			},
-		icon = "__PyCoalTBaA__/graphics/icons/angels-ore-mix-mol-sorting.png",
+		icon = "__PyCoalTBaA-Temp-Dark__/graphics/icons/angels-ore-mix-mol-sorting.png",
 		order = "c-i-g[angelsore-crystal-mix-mol-processing]",
      }
 
@@ -332,7 +332,7 @@ fun.Recipe
 				{type = "item", name = "raw-borax", amount_min = 1, amount_max = 2, probability = 0.36},
 			}
 		},
-		icon = "__PyCoalTBaA__/graphics/icons/slag-processing-mol.png",
+		icon = "__PyCoalTBaA-Temp-Dark__/graphics/icons/slag-processing-mol.png",
 		icon_size = 32,
 		order = "a-a [slag-processing-up]",
 	}
@@ -363,6 +363,6 @@ fun.Recipe
 					{type = "item", name = "raw-borax", amount = 4}
 				}
 			},
-		icon = "__PyCoalTBaA__/graphics/icons/angels-ore-mix-mol-sorting.png",
+		icon = "__PyCoalTBaA-Temp-Dark__/graphics/icons/angels-ore-mix-mol-sorting.png",
 		order = "c-i-g[angelsore-crystal-mix-mol-processing]",
 	}

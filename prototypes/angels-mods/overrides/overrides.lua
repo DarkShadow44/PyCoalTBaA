@@ -360,7 +360,7 @@ if mods['angelspetrochem'] then
                     results = {
                         {type = 'item', name = 'molybdenum-ore', amount_min = 1, amount_max = 2, probability = 0.36}
                     },
-                    icon = '__PyCoalTBaA__/graphics/icons/slag-processing-mol.png',
+                    icon = '__PyCoalTBaA-Temp-Dark__/graphics/icons/slag-processing-mol.png',
                     icon_size = 32,
                     order = 'a-a [slag-processing-up]'
                 },
@@ -380,7 +380,7 @@ if mods['angelspetrochem'] then
                     results = {
                         {type = 'item', name = 'molybdenum-ore', amount = 4}
                     },
-                    icon = '__PyCoalTBaA__/graphics/icons/angels-ore-mix-mol-sorting.png',
+                    icon = '__PyCoalTBaA-Temp-Dark__/graphics/icons/angels-ore-mix-mol-sorting.png',
                     icon_size = 32,
                     order = 'c-i-g[angelsore-crystal-mix-mol-processing]'
                 }
