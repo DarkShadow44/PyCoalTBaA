@@ -1063,7 +1063,9 @@ local scilist = {}
 	for tn,tname in pairs(techlist) do
 		for t, tech in pairs(data.raw.technology) do
 			for s, sci in pairs(tech.unit.ingredients) do
-				scilist[sci[1]] = true
+				if sci[1] ~= nil then
+					scilist[sci[1]] = true
+				end
 			end
 			if not scilist[scipack] then
 				table.insert(data.raw.technology[tech.name].unit.ingredients,{"science-pack-0",1})
