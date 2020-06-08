@@ -78,8 +78,6 @@ for i, ings in pairs(data.raw.recipe) do
                     else
                         data.raw.recipe[ings.name].ingredients[a] = nil
                     end
-                else
-                    data.raw.recipe[ings.name].ingredients[a] = nil
                 end
             elseif type(ing[1]) == 'string' then
                 --log(serpent.block(ing))
@@ -104,8 +102,6 @@ for i, ings in pairs(data.raw.recipe) do
                     else
                         data.raw.recipe[ings.name].normal.ingredients[a] = nil
                     end
-                else
-                    data.raw.recipe[ings.name].normal.ingredients[a] = nil
                 end
             elseif type(ing[1]) == 'string' then
                 --log(serpent.block(ing))
@@ -135,8 +131,6 @@ for i, ings in pairs(data.raw.recipe) do
                             else
                                 data.raw.recipe[ings.name].expensive.ingredients[a] = nil
                             end
-                        else
-                            data.raw.recipe[ings.name].expensive.ingredients[a] = nil
                         end
                     elseif type(ing[1]) == 'string' then
                         --log(serpent.block(ing))
