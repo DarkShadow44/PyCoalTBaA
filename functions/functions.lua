@@ -565,6 +565,9 @@ function overrides.results_replacer(recipe, old, new, new_amount, newtype)
                                     if data.raw.fluid[new] == nil and data.raw.recipe[recipe.name].normal.results[r].type ~= 'item' then
                                         data.raw.recipe[recipe.name].normal.results[r].type = 'item'
                                     end
+									if newtype ~= nil then
+										data.raw.recipe[recipe.name].normal.results[r].type = newtype
+									end
                                 end
                             end
                         end
@@ -593,6 +596,9 @@ function overrides.results_replacer(recipe, old, new, new_amount, newtype)
                                     if data.raw.fluid[new] == nil and data.raw.recipe[recipe.name].expensive.results[r].type ~= 'item' then
                                         data.raw.recipe[recipe.name].expensive.results[r].type = 'item'
                                     end
+									if newtype ~= nil then
+										data.raw.recipe[recipe.name].expensive.results[r].type = newtype
+									end
                                 end
                             end
                         end
