@@ -228,7 +228,7 @@ for _, recipe in pairs(data.raw.recipe) do
             --log(rn)
             data.raw.recipe[recipe.name].icon = data.raw.module[rn].icon
         end
-        if recipe.name == 'ammo-initial' then
+        if recipe.name == 'ammo-initial' and data.raw.recipe['ammo-initial'].results ~= nil then
             data.raw.recipe['ammo-initial'].main_product = data.raw.recipe['ammo-initial'].results[1].name
         end
 		if recipe.name == 'copper-nickel-firearm-magazine' then
