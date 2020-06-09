@@ -22,26 +22,28 @@ if mods['angelspetrochem'] and not mods['omnimatter_compression'] and not mods['
         end
 
         for i, recipe_name in ipairs(recipes_list) do
-            local ingredients = data.raw.recipe[recipe_name].ingredients
-            for k, ingredient in ipairs(ingredients) do
-                for j, item_name in ipairs(items_list) do
-                    if ingredient.name == item_name then
-                        OV.patch_recipes(
-                            {
-                                {
-                                    name = recipe_name,
-                                    ingredients = {
-                                        {
-                                            name = 'sulfuric-acid',
-                                            type = 'fluid',
-                                            amount = ingredient.amount * factor
-                                        }
-                                    }
-                                }
-                            }
-                        )
-                    end
-                end
+			if data.raw.recipe[recipe_name] ~= nil and data.raw.recipe[recipe_name].ingredients ~= nil then
+				local ingredients = data.raw.recipe[recipe_name].ingredients
+				for k, ingredient in ipairs(ingredients) do
+					for j, item_name in ipairs(items_list) do
+						if ingredient.name == item_name then
+							OV.patch_recipes(
+								{
+									{
+										name = recipe_name,
+										ingredients = {
+											{
+												name = 'sulfuric-acid',
+												type = 'fluid',
+												amount = ingredient.amount * factor
+											}
+										}
+									}
+								}
+							)
+						end
+					end
+				end
             end
         end
     end
