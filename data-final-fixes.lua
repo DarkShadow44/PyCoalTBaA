@@ -340,3 +340,18 @@ fun.global_item_replacer("sand", "solid-sand")
 fun.results_replacer('soil-washing','sand','solid-sand')
 
 --log(serpent.block(data.raw.recipe['soil-washing']))
+
+if mods["angelspetrochem"]  then
+	if mods["bobplates"] then
+		fun.global_item_replacer("calcium-chloride", "solid-calcium-chloride")
+	end
+
+	if mods["bobrevamp"] and settings.startup["bobmods-revamp-hardmode"].value then
+		fun.global_item_replacer("dinitrogen-tetroxide", "gas-dinitrogen-tetroxide")
+		fun.global_item_replacer("sodium-perchlorate", "solid-sodium-perchlorate")
+		if mods["bobplates"] then
+			fun.global_item_replacer("brine", "water-saline")
+		end
+	end
+	fun.global_item_replacer("petroleum-gas", "gas-methane")
+end
