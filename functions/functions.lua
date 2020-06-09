@@ -37,6 +37,9 @@ function overrides.add_result(recipe, result)
         --check if result is item or fluid and that it exists
         if data.raw.item[result.name] ~= nil or data.raw.fluid[result.name] ~= nil then
             --check if type is set to fluid
+			if data.raw.recipe[recipe].results == nil then
+				data.raw.recipe[recipe].results = {}
+			end
             if result.type == 'fluid' then
                 table.insert(data.raw.recipe[recipe].results, {type = 'fluid', name = result.name, amount = result.amount})
             else
