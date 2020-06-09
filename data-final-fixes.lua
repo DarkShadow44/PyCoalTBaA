@@ -259,7 +259,7 @@ end
 
 
 
---removes missing items from recipe results that dont exist
+--[[removes missing items from recipe results that dont exist
 for _, recipe in pairs(data.raw.recipe) do
     if recipe.results ~= nil then
         for r, result in pairs(recipe.results) do
@@ -267,6 +267,9 @@ for _, recipe in pairs(data.raw.recipe) do
 				if data.raw.item[result.name] == nil and data.raw.fluid[result.name] == nil and data.raw['selection-tool'][result.name] == nil and data.raw.tool[result.name] == nil and data.raw.ammo[result.name] == nil then
 					log(serpent.block(recipe))
 					data.raw.recipe[recipe.name].results[r] = nil
+					if data.raw.recipe[recipe.name].main_product == result.name then
+						data.raw.recipe[recipe.name].main_product = nil
+					end
 				end
 			end
         end
@@ -277,6 +280,9 @@ for _, recipe in pairs(data.raw.recipe) do
 				if result.name ~= nil then
 					if data.raw.item[result.name] == nil and data.raw.fluid[result.name] == nil and data.raw['selection-tool'][result.name] == nil and data.raw.tool[result.name] == nil and data.raw.ammo[recipe.name] == nil then
 						data.raw.recipe[recipe.name].normal.results[r] = nil
+						if data.raw.recipe[recipe.name].normal.main_product == result.name then
+							data.raw.recipe[recipe.name].normal.main_product = nil
+						end
 					end
 				end
             end
@@ -288,12 +294,16 @@ for _, recipe in pairs(data.raw.recipe) do
 				if result.name ~= nil then
 					if data.raw.item[result.name] == nil and data.raw.fluid[result.name] == nil and data.raw['selection-tool'][result.name] == nil and data.raw.tool[result.name] == nil and data.raw.ammo[recipe.name] == nil then
 						data.raw.recipe[recipe.name].expensive.results[r] = nil
+						if data.raw.recipe[recipe.name].expensive.main_product == result.name then
+							data.raw.recipe[recipe.name].expensive.main_product = nil
+						end
 					end
 				end
             end
         end
     end
 end
+]]
 
 --table.insert(data.raw.recipe['zone-planner'].results, {type="item", name="zone-planner", amount=1})
 --table.insert(data.raw.recipe["iron-oxide"].results, {type="item", name="iron-plate", amount=10})
