@@ -30,3 +30,14 @@ if data.raw["furnace"]["py-sinkhole"] ~= nil then
 	data.raw["furnace"]["py-sinkhole"].crafting_speed = 10
 
 end
+
+-- Fix issues with omnimatter... ?
+for _,rec in pairs(data.raw.recipe) do
+	if (rec.subgroup == nil) then
+		data.raw.recipe[rec.name].subgroup = "other"
+	end
+	if rec.icon == nil then
+		rec.icon = "__PyCoalTBaA-Temp-Dark__/graphics/icons/untextured.png"
+		rec.icon_size = 32
+	end
+end
