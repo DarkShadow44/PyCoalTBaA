@@ -35,27 +35,17 @@ if mods["omnimatter"] then
 end
 
 if mods["omnimatter_wood"] then
-
-local limit = {}
-
-		if data.raw.module["productivity-module"].limitation ~= nil then
-			for l, lim in pairs(data.raw.module["productivity-module"].limitation) do
+	for k, mod in pairs(data.raw.module) do
+		local limit = {}
+		if mod.limitation ~= nil then
+			for l, lim in pairs(mod.limitation) do
 				if lim ~= "log1" and lim ~= "log2" and lim ~= "log3" and lim ~= "log4" and lim ~= "log5" and lim ~= "log6" and lim ~= "log-organics" and lim ~= "log-wood" and lim ~= "botanical-nursery" then
 					table.insert(limit, lim)
 				end
 			end
+			mod.limitation = limit
 		end
-
---log(serpent.block(limit))
-data.raw.module["productivity-module"].limitation = limit
-data.raw.module["productivity-module-2"].limitation = limit
-data.raw.module["productivity-module-3"].limitation = limit
-
-for m, mod in pairs(data.raw.module) do
-	if mod.name:find("productivity%-module") and mod.limitation then
-		mod.limitation = limit
 	end
-end
 
 end
 --[[
