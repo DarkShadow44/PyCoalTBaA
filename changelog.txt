@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.15
+  Changes:
+	- Fix crash when bobpower is not installed
+Version: 0.9.13
+  Changes:
+	- Fix crash when Angel's Refining is not installed
+	- Fix heavy-water name to prevent a crash
+	- Only deduplicate recipes, don't throw away items not registered as item/fluid
+	- Remove omnimatter_wood removed limitations from all modules
+---------------------------------------------------------------------------------------------------
 Version: 0.9.10
   Changes:
 	- first update to .18
