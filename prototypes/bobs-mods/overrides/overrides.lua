@@ -378,7 +378,7 @@ if mods['pyrawores'] then
     end
 end
 
-if settings.startup['disable-bobpower'].value then
+if mods["bobpower"] and settings.startup['disable-bobpower'].value then
 
     data.raw.technology['bob-boiler-2'].hidden = true
     data.raw.technology['bob-boiler-3'].hidden = true
